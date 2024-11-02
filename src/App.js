@@ -1,10 +1,12 @@
 import React from "react";
-import HomePage from "./components/Home";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Navbar />
+      <Home />
     </div>
   );
 }

@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .font-inherit {
+    font-family: inherit; /* Inherit the font from the parent */
+  }
+}
+
 @layer base {
   blockquote,
   dl,
@@ -35,6 +41,43 @@
   video {
     max-width: 100%;
     height: auto;
+  }
+
+  button,
+  [role="button"] {
+    @apply cursor-pointer; /* Set cursor to pointer */
+  }
+
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"] {
+    @apply bg-transparent; /* Remove background color */
+    -webkit-appearance: button; /* Reset default button styling */
+    background-image: none; /* Remove background image */
+  }
+
+  button,
+  select {
+    @apply not-italic; /* Prevent text transformation */
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    @apply font-inherit text-base; /* Inherit font family, set font size to 100% */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+  }
+
+  ol,
+  ul,
+  menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 }
 
