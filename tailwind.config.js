@@ -6,6 +6,10 @@ module.exports = {
         customBlue: "rgb(74, 108, 247)",
         customBlack: "rgb(9, 14, 52)",
       },
+      spacing: {
+        '145': '145px',
+        '120': '120px',
+      },
     },
   },
   plugins: [],
