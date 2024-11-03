@@ -7,8 +7,11 @@ module.exports = {
         customBlack: "rgb(9, 14, 52)",
       },
       spacing: {
-        '145': '145px',
-        '120': '120px',
+        145: "145px",
+        120: "120px",
+      },
+      boxShadow: {
+        "inset-bottom": "inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)",
       },
     },
   },

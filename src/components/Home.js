@@ -3,10 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <>
-      <section
-        id="home"
-        className="2xl:h-[700px] 2xl:flex lg:pt-[100px] pt-[150px] items-center z-10 relative"
-      >
+      <div className="2xl:h-[700px] 2xl:flex lg:pt-[100px] pt-[150px] items-center z-10 relative">
         <div className="container mx-auto px-4 sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
           <div className="flex flex-wrap -mx-4">
             <div className="lg:w-1/2 px-4 self-center w-full">
@@ -19,7 +16,9 @@ const Home = () => {
                 </h1>
                 <h2 className="text-[rgb(149,156,177)] font-medium mb-5 m-0 text-lg">
                   Full-Stack{" "}
-                  <span className="text-[rgb(9,14,52)]">Software Developer</span>
+                  <span className="text-[rgb(9,14,52)]">
+                    Software Developer
+                  </span>
                 </h2>
                 <p className="text-[rgb(149,156,177)] font-medium text-base leading-6 max-w-[470px] mb-[2.75rem]">
                   I'm a Full-Stack Software Developer with a passion for
@@ -70,9 +69,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-
         <div>
-          <span className="absolute top-8 left-0">
+          <span className="absolute top-[8rem] left-[0]">
             <svg
               width="48"
               height="95"
@@ -133,7 +131,7 @@ const Home = () => {
             </svg>
           </span>
         </div>
-      </section>
+      </div>
     </>
   );
 };

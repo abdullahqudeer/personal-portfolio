@@ -3,19 +3,26 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <section id="about" className="relative pt-145 pb-120 z-10">
+      <div className="relative pt-145 pb-120 z-10">
         <div className="w-ful mx-auto px-4 max-w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
           <div className="flex flex-wrap -mx-4">
-            <span className="text-[1.25rem] leading-[1.75rem] text-[rgb(74,108,247)] font-bold mb-3">
+            <span className="text-[1.25rem] leading-[1.75rem] text-[rgb(74,108,247)] font-semibold mb-3">
               ABOUT ME
             </span>
           </div>
           <div className="flex flex-wrap -mx-4 mb-12">
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
-              <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-bold text-[rgb(9,14,52)] ">
-                Crafting Solutions That Matter
-              </h2>
-              <p className="text-[rgb(149,156,177)] font-medium">
+              <div className="flex">
+                <img
+                  src="images/solution.png"
+                  alt="Crafting Solutions That Matter"
+                  class="w-8 h-8 mr-4"
+                />
+                <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)] ">
+                  Crafting Solutions That Matter
+                </h2>
+              </div>
+              <p className="text-[rgb(149,156,177)] font-medium ml-12">
                 Every line of code I write is aimed at solving real-world
                 problems. I focus on understanding the unique needs of each
                 project to deliver solutions that make a meaningful impact on
@@ -23,10 +30,17 @@ const About = () => {
               </p>
             </div>
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
-              <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-bold text-[rgb(9,14,52)]">
-                Passion for Innovation
-              </h2>
-              <p className="text-[rgb(149,156,177)] font-medium">
+              <div className="flex">
+                <img
+                  src="images/innovation.png"
+                  alt="Passion for Innovation"
+                  class="w-8 h-8 mr-4"
+                />
+                <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
+                  Passion for Innovation
+                </h2>
+              </div>
+              <p className="text-[rgb(149,156,177)] font-medium ml-12">
                 In the fast-paced world of technology, staying ahead means
                 embracing change. I'm passionate about exploring new tools and
                 methodologies that can elevate my work and provide cutting-edge
@@ -36,10 +50,17 @@ const About = () => {
           </div>
           <div className="flex flex-wrap -mx-4">
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
-              <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-bold text-[rgb(9,14,52)]">
-                Committed to Continuous Learning
-              </h2>
-              <p className="text-[rgb(149,156,177)] font-medium">
+              <div className="flex">
+                <img
+                  src="images/learning.png"
+                  alt="Committed to Continuous Learning"
+                  class="w-8 h-8 mr-4"
+                />
+                <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
+                  Committed to Continuous Learning
+                </h2>
+              </div>
+              <p className="text-[rgb(149,156,177)] font-medium ml-12">
                 The journey of a developer is one of constant growth. I thrive
                 on learning and adapting to new challenges, always seeking
                 opportunities to expand my skill set and deliver the best
@@ -47,10 +68,17 @@ const About = () => {
               </p>
             </div>
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
-              <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-bold text-[rgb(9,14,52)]">
-                Driven by Curiosity
-              </h2>
-              <p className="text-[rgb(149,156,177)] font-medium">
+              <div className="flex">
+                <img
+                  src="images/curiosity.png"
+                  alt=" Driven by Curiosity"
+                  class="w-8 h-8 mr-4"
+                />
+                <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
+                  Driven by Curiosity
+                </h2>
+              </div>
+              <p className="text-[rgb(149,156,177)] font-medium ml-12">
                 Curiosity fuels my passion for technology. I am constantly
                 exploring new concepts, tools, and trends in the industry. This
                 drive to learn not only keeps my skills sharp but also inspires
@@ -91,7 +119,7 @@ const About = () => {
             </defs>
           </svg>
         </div>
-      </section>
+      </div>
     </>
   );
 };
