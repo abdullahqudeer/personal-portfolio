@@ -19,12 +19,12 @@ const About = () => {
           </div>
           <div className="flex flex-wrap -mx-4 mb-12">
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
-              <div className="flex">
+              <div className="flex mb-5 items-center">
                 <FontAwesomeIcon
-                  className="pt-2 text-blue-500 w-8 h-8 mr-4"
+                  className="text-blue-500 w-8 h-8 mr-4"
                   icon={faHammer}
                 ></FontAwesomeIcon>
-                <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)] ">
+                <h2 className="text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)] ">
                   Crafting Solutions That Matter
                 </h2>
               </div>
@@ -36,12 +36,12 @@ const About = () => {
               </p>
             </div>
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
-              <div className="flex">
+              <div className="flex  mb-5 items-center">
                 <FontAwesomeIcon
-                  className="pt-2 text-blue-500 w-8 h-8 mr-4"
-                  icon={faMagnifyingGlass}
+                  className="text-blue-500 w-8 h-8 mr-4"
+                  icon={faLightbulb}
                 ></FontAwesomeIcon>
-                <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
+                <h2 className="text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
                   Passion for Innovation
                 </h2>
               </div>
@@ -55,12 +55,12 @@ const About = () => {
           </div>
           <div className="flex flex-wrap -mx-4">
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
-              <div className="flex">
+              <div className="flex mb-5 items-center">
                 <FontAwesomeIcon
-                  className="pt-2 text-blue-500 w-8 h-8 mr-4"
+                  className="text-blue-500 w-8 h-8 mr-4"
                   icon={faGraduationCap}
                 ></FontAwesomeIcon>
-                <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
+                <h2 className="text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
                   Committed to Continuous Learning
                 </h2>
               </div>
@@ -72,12 +72,12 @@ const About = () => {
               </p>
             </div>
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
-              <div className="flex">
+              <div className="flex mb-5 items-center">
                 <FontAwesomeIcon
-                  className="pt-2 text-blue-500 w-8 h-8 mr-4"
-                  icon={faGraduationCap}
+                  className="text-blue-500 w-8 h-8 mr-4"
+                  icon={faMagnifyingGlass}
                 ></FontAwesomeIcon>
-                <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
+                <h2 className="text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
                   Driven by Curiosity
                 </h2>
               </div>
