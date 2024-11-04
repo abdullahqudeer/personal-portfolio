@@ -21,9 +21,14 @@ const Home = () => {
                   </span>
                 </h2>
                 <p className="text-[rgb(149,156,177)] font-medium text-base leading-6 max-w-[470px] mb-[2.75rem]">
-                  I'm a Full-Stack Software Developer with a passion for
-                  crafting clean and efficient code, transforming ideas into
-                  seamless digital experiences.
+                  With over 11 years of experience in full-stack development, I
+                  specialize in creating high-performance applications and
+                  scalable solutions. My deep understanding of both front-end
+                  and back-end technologies enables me to design and develop
+                  user-friendly, efficient, and secure applications. Whether you
+                  need a dynamic web application, a robust server-side API, or a
+                  cloud-based infrastructure, I deliver solutions tailored to
+                  your business needs.
                 </p>
                 <div className="mb-4 flex flex-col sm:flex-row sm:items-center">
                   <a

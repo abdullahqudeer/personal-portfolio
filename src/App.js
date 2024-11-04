@@ -2,6 +2,7 @@ import { React, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
+import Services from "./components/Services";
 
 function App() {
   // Create refs for each menu item
@@ -14,7 +15,6 @@ function App() {
 
   // Scroll function that scrolls to a specific ref
   const scrollToSection = (ref) => {
-    
     if (ref.current) {
       ref.current.scrollIntoView({
         behavior: "smooth",
@@ -30,7 +30,7 @@ function App() {
         refs={{
           home: homeRef,
           about: aboutRef,
-          portfolio: servicesRef,
+          services: servicesRef,
           skills: skillsRef,
           experience: experienceRef,
           contact: contactRef,
@@ -42,6 +42,9 @@ function App() {
       </section>
       <section ref={aboutRef} id="about">
         <About />
+      </section>
+      <section ref={servicesRef} id="services">
+        <Services />
       </section>
     </div>
   );
