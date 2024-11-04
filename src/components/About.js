@@ -1,4 +1,11 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLightbulb,
+  faHammer,
+  faGraduationCap,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   return (
@@ -13,11 +20,10 @@ const About = () => {
           <div className="flex flex-wrap -mx-4 mb-12">
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
               <div className="flex">
-                <img
-                  src="images/solution.png"
-                  alt="Crafting Solutions That Matter"
-                  class="w-8 h-8 mr-4"
-                />
+                <FontAwesomeIcon
+                  className="pt-2 text-blue-500 w-8 h-8 mr-4"
+                  icon={faHammer}
+                ></FontAwesomeIcon>
                 <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)] ">
                   Crafting Solutions That Matter
                 </h2>
@@ -31,11 +37,10 @@ const About = () => {
             </div>
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
               <div className="flex">
-                <img
-                  src="images/innovation.png"
-                  alt="Passion for Innovation"
-                  class="w-8 h-8 mr-4"
-                />
+                <FontAwesomeIcon
+                  className="pt-2 text-blue-500 w-8 h-8 mr-4"
+                  icon={faMagnifyingGlass}
+                ></FontAwesomeIcon>
                 <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
                   Passion for Innovation
                 </h2>
@@ -51,11 +56,10 @@ const About = () => {
           <div className="flex flex-wrap -mx-4">
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
               <div className="flex">
-                <img
-                  src="images/learning.png"
-                  alt="Committed to Continuous Learning"
-                  class="w-8 h-8 mr-4"
-                />
+                <FontAwesomeIcon
+                  className="pt-2 text-blue-500 w-8 h-8 mr-4"
+                  icon={faGraduationCap}
+                ></FontAwesomeIcon>
                 <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
                   Committed to Continuous Learning
                 </h2>
@@ -69,11 +73,10 @@ const About = () => {
             </div>
             <div className="w-full mb-8 px-4 lg:mb-0 lg:w-1/2 xl:w-1/2">
               <div className="flex">
-                <img
-                  src="images/curiosity.png"
-                  alt=" Driven by Curiosity"
-                  class="w-8 h-8 mr-4"
-                />
+                <FontAwesomeIcon
+                  className="pt-2 text-blue-500 w-8 h-8 mr-4"
+                  icon={faGraduationCap}
+                ></FontAwesomeIcon>
                 <h2 className="mb-5 text-[1.875rem] leading-[1.25] font-semibold text-[rgb(9,14,52)]">
                   Driven by Curiosity
                 </h2>
