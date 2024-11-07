@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Services";
+import Skills from "./components/Skills";
 
 function App() {
   // Create refs for each menu item
@@ -45,6 +46,10 @@ function App() {
       </section>
       <section ref={servicesRef} id="services">
         <Services />
+      </section>
+
+      <section ref={skillsRef} id="skills">
+        <Skills />
       </section>
     </div>
   );
