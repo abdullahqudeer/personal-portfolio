@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
+import Resume from "./components/Resume";
 
 function App() {
   // Create refs for each menu item
@@ -11,7 +12,7 @@ function App() {
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
   const skillsRef = useRef(null);
-  const experienceRef = useRef(null);
+  const resumeRef = useRef(null);
   const contactRef = useRef(null);
 
   // Scroll function that scrolls to a specific ref
@@ -33,7 +34,7 @@ function App() {
           about: aboutRef,
           services: servicesRef,
           skills: skillsRef,
-          experience: experienceRef,
+          resume: resumeRef,
           contact: contactRef,
         }}
       />
@@ -50,6 +51,9 @@ function App() {
 
       <section ref={skillsRef} id="skills">
         <Skills />
+      </section>
+      <section ref={resumeRef} id="resume">
+        <Resume />
       </section>
     </div>
   );

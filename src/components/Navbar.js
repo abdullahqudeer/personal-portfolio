@@ -96,6 +96,10 @@ const Navbar = ({ onLinkClick, refs }) => {
                     <li className="relative group">
                       <a
                         href="#skills"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          onLinkClick(refs.skills);
+                        }}
                         className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
                       >
                         Skills
@@ -103,10 +107,15 @@ const Navbar = ({ onLinkClick, refs }) => {
                     </li>
                     <li className="relative group">
                       <a
-                        href="#experience"
+                        href="#resume"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          onLinkClick(refs.resume);
+                        }}
+
                         className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
                       >
-                        Experience
+                        Resume
                       </a>
                     </li>
                     <li className="relative group">
