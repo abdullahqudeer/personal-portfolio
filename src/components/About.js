@@ -115,9 +115,9 @@ const About = () => {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(60) rotate(90) scale(120)"
               >
-                <stop stop-color="white"></stop>
-                <stop offset="0.569" stop-color="#F0F4FD"></stop>
-                <stop offset="0.993" stop-color="#D9E0F0"></stop>
+                <stop stopColor="white"></stop>
+                <stop offset="0.569" stopColor="#F0F4FD"></stop>
+                <stop offset="0.993" stopColor="#D9E0F0"></stop>
               </radialGradient>
             </defs>
           </svg>

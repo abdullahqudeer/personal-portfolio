@@ -5,6 +5,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Resume from "./components/Resume";
+import Contact from "./components/Contact";
 
 function App() {
   // Create refs for each menu item
@@ -54,6 +55,9 @@ function App() {
       </section>
       <section ref={resumeRef} id="resume">
         <Resume />
+      </section>
+      <section ref={contactRef} id="contact">
+        <Contact />
       </section>
     </div>
   );

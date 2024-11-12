@@ -95,9 +95,13 @@ const Skills = () => {
                     key={index}
                     className="group relative w-72 h-72 bg-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl p-6 flex flex-col justify-center items-center"
                   >
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <image src="https://www.nicepng.com/png/detail/1-18174_vector-free-stock-clouds-svg-white-cloud-svg.png"></image>
-                    </div>
+                    <div
+                      className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-300 h-full w-full bg-cover bg-center"
+                      style={{
+                        backgroundImage:
+                          "url(images/skills/white-cloud.png)",
+                      }}
+                    ></div>
                     <div className="z-10 flex flex-col items-center justify-center">
                       <img
                         src={skill.icon}

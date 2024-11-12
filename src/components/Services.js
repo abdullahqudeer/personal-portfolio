@@ -54,7 +54,7 @@ const Services = () => {
 
           <div className="flex flex-wrap -mx-4 items-stretch">
             {myServices.map((item, index) => (
-              <div className="px-4 w-full md:w-1/2 lg:w-1/4">
+              <div className="px-4 w-full md:w-1/2 lg:w-1/4" key={index}>
                 <div
                   className="group transition duration-200 shadow-[0px_11px_41px_-11px_rgba(9,14,52,0.1)] text-center py-10 px-8 
                     bg-white rounded-lg overflow-hidden mb-8 z-10 relative hover:bg-[rgba(74,108,247)] h-full flex flex-col justify-between"

@@ -121,6 +121,10 @@ const Navbar = ({ onLinkClick, refs }) => {
                     <li className="relative group">
                       <a
                         href="#contact"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          onLinkClick(refs.contact);
+                        }}
                         className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
                       >
                         Contact
