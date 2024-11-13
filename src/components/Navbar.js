@@ -1,25 +1,29 @@
 import { React, useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
+import NavbarToggler from "./NavbarToggler";
 
 const Navbar = ({ onLinkClick, refs }) => {
-  // State to determine if the header is sticky
   const [isSticky, setIsSticky] = useState(false);
+  const [isNavbarToggleOn, setIsNavbarToggleOn] = useState(false);
 
-  // Define handleScroll as a callback
+  const handleNavbarToggle = (toggleValue) => {
+    setIsNavbarToggleOn(toggleValue);
+  };
+
+  const handleNavbarLinkClick = (scrollToSection) => {
+    setIsNavbarToggleOn(false);
+    onLinkClick(scrollToSection);
+  };
   const handleScroll = useCallback(() => {
-    // Update isSticky based on the scroll position
     setIsSticky(window.scrollY > 50);
   }, []);
 
   useEffect(() => {
-    // Attach event listener to track scroll
     window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [handleScroll]); // Adding handleScroll as a dependency
+  }, [handleScroll]);
 
   return (
     <>
@@ -36,25 +40,21 @@ const Navbar = ({ onLinkClick, refs }) => {
                 <img
                   src="images/logo.svg"
                   alt="logo"
-                  className={`w-full ${isSticky ? "py-2" : "py-6"}`}
+                  className={`w-full ${isSticky ? "py-4" : "py-6"}`}
                 ></img>
               </Link>
             </div>
             <div className="px-4 justify-between items-center w-full flex">
               <div>
-                <button
-                  id="navbarToggler"
-                  name="navbarToggler"
-                  aria-label="navbarToggler"
-                  className="relative block lg:hidden  ring ring-blue-600 opacity-100 pt-1.5 pb-1.5 pl-3 pr-3 rounded-lg transform translate-y-[-50%]  absolute right-4"
-                >
-                  <span className="bg-gray-800 w-8 h-0.5 block mt-1.5 mb-1.5 relative"></span>
-                  <span className="bg-gray-800 w-8 h-0.5 block mt-1.5 mb-1.5 relative"></span>
-                  <span className="bg-gray-800 w-8 h-0.5 block mt-1.5 mb-1.5 relative"></span>
-                </button>
+                <NavbarToggler
+                  isActive={isNavbarToggleOn}
+                  onToggle={handleNavbarToggle}
+                />
                 <nav
                   id="navbarCollapse"
-                  className="lg:pl-4 lg:pr-4 lg:pt-0 lg:pb-0 lg:bg-transparent lg:max-w-full lg:w-full lg:block lg:static pt-5 pb-5 bg-white rounded-md w-full hidden absolute"
+                  className={`max-w-[250px] lg:pl-4 lg:pr-4 lg:pt-0 lg:pb-0 lg:bg-transparent lg:max-w-full lg:w-full lg:block lg:static py-5 bg-white rounded-md w-full top-[100%] right-4 shadow-lg lg:shadow-none  absolute ${
+                    isNavbarToggleOn ? "block" : "hidden"
+                  }`}
                 >
                   <ul className="lg:flex">
                     <li className="relative group">
@@ -62,7 +62,7 @@ const Navbar = ({ onLinkClick, refs }) => {
                         href="#home"
                         onClick={(e) => {
                           e.preventDefault();
-                          onLinkClick(refs.home);
+                          handleNavbarLinkClick(refs.home);
                         }}
                         className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
                       >
@@ -74,7 +74,7 @@ const Navbar = ({ onLinkClick, refs }) => {
                         href="#about"
                         onClick={(e) => {
                           e.preventDefault();
-                          onLinkClick(refs.about);
+                          handleNavbarLinkClick(refs.about);
                         }}
                         className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
                       >
@@ -86,7 +86,7 @@ const Navbar = ({ onLinkClick, refs }) => {
                         href="#services"
                         onClick={(e) => {
                           e.preventDefault();
-                          onLinkClick(refs.services);
+                          handleNavbarLinkClick(refs.services);
                         }}
                         className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
                       >
@@ -98,7 +98,7 @@ const Navbar = ({ onLinkClick, refs }) => {
                         href="#skills"
                         onClick={(e) => {
                           e.preventDefault();
-                          onLinkClick(refs.skills);
+                          handleNavbarLinkClick(refs.skills);
                         }}
                         className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
                       >
@@ -110,7 +110,7 @@ const Navbar = ({ onLinkClick, refs }) => {
                         href="#resume"
                         onClick={(e) => {
                           e.preventDefault();
-                          onLinkClick(refs.resume);
+                          handleNavbarLinkClick(refs.resume);
                         }}
                         className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
                       >
@@ -122,7 +122,7 @@ const Navbar = ({ onLinkClick, refs }) => {
                         href="#contact"
                         onClick={(e) => {
                           e.preventDefault();
-                          onLinkClick(refs.contact);
+                          handleNavbarLinkClick(refs.contact);
                         }}
                         className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
                       >
@@ -134,7 +134,7 @@ const Navbar = ({ onLinkClick, refs }) => {
               </div>
               <div className="pr-16 lg:pr-0 justify-end hidden sm:flex">
                 <a
-                  href="#contact"
+                  href="#download-cv"
                   className="pl-9 pr-9 md:pl-9 md:pr-9 lg:pl-8 lg:pr-8 ease-in-out duration-300 text-white font-bold text-base leading-6 pt-3 pb-3 rounded-full bg-blue-600"
                 >
                   Download CV
