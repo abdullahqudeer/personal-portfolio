@@ -6,6 +6,8 @@ import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   // Create refs for each menu item
@@ -25,41 +27,62 @@ function App() {
       });
     }
   };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
-    <div className="App">
-      <Navbar
-        onLinkClick={scrollToSection}
-        refs={{
-          home: homeRef,
-          about: aboutRef,
-          services: servicesRef,
-          skills: skillsRef,
-          resume: resumeRef,
-          contact: contactRef,
-        }}
-      />
+    <>
+      <div className="App">
+        <Navbar
+          onLinkClick={scrollToSection}
+          refs={{
+            home: homeRef,
+            about: aboutRef,
+            services: servicesRef,
+            skills: skillsRef,
+            resume: resumeRef,
+            contact: contactRef,
+          }}
+        />
 
-      <section ref={homeRef} id="home">
-        <Home />
-      </section>
-      <section ref={aboutRef} id="about">
-        <About />
-      </section>
-      <section ref={servicesRef} id="services">
-        <Services />
-      </section>
+        <section ref={homeRef} id="home">
+          <Home />
+        </section>
+        <section ref={aboutRef} id="about">
+          <About />
+        </section>
+        <section ref={servicesRef} id="services">
+          <Services />
+        </section>
 
-      <section ref={skillsRef} id="skills">
-        <Skills />
-      </section>
-      <section ref={resumeRef} id="resume">
-        <Resume />
-      </section>
-      <section ref={contactRef} id="contact">
-        <Contact />
-      </section>
-    </div>
+        <section ref={skillsRef} id="skills">
+          <Skills />
+        </section>
+        <section ref={resumeRef} id="resume">
+          <Resume />
+        </section>
+        <section ref={contactRef} id="contact">
+          <Contact />
+        </section>
+        <Footer
+          onLinkClick={scrollToSection}
+          refs={{
+            home: homeRef,
+            about: aboutRef,
+            services: servicesRef,
+            skills: skillsRef,
+            resume: resumeRef,
+            contact: contactRef,
+          }}
+        />
+      </div>
+
+      <ScrollToTopButton />
+    </>
   );
 }
 

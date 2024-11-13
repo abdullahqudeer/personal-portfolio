@@ -99,7 +99,7 @@ const Skills = () => {
                       className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-300 h-full w-full bg-cover bg-center"
                       style={{
                         backgroundImage:
-                          "url(images/skills/white-cloud.png)",
+                          "url(images/white-cloud.png)",
                       }}
                     ></div>
                     <div className="z-10 flex flex-col items-center justify-center">

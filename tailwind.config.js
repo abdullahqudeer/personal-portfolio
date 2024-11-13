@@ -13,6 +13,15 @@ module.exports = {
       boxShadow: {
         "inset-bottom": "inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)",
       },
+      zIndex: {
+        999: "999",
+      },
+      rotate: {
+        45: "45deg",
+      },
+      skew: {
+        '12': '12deg',
+      },
     },
   },
   plugins: [],

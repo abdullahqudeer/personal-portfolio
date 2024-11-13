@@ -40,7 +40,7 @@ const Navbar = ({ onLinkClick, refs }) => {
                 ></img>
               </Link>
             </div>
-            <div className="flex px-4 w-full justify-between items-center">
+            <div className="px-4 justify-between items-center w-full flex">
               <div>
                 <button
                   id="navbarToggler"
@@ -112,7 +112,6 @@ const Navbar = ({ onLinkClick, refs }) => {
                           e.preventDefault();
                           onLinkClick(refs.resume);
                         }}
-
                         className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
                       >
                         Resume
@@ -133,7 +132,7 @@ const Navbar = ({ onLinkClick, refs }) => {
                   </ul>
                 </nav>
               </div>
-              <div className="pr-16 lg:pr-0 sm:flex justify-end">
+              <div className="pr-16 lg:pr-0 justify-end hidden sm:flex">
                 <a
                   href="#contact"
                   className="pl-9 pr-9 md:pl-9 md:pr-9 lg:pl-8 lg:pr-8 ease-in-out duration-300 text-white font-bold text-base leading-6 pt-3 pb-3 rounded-full bg-blue-600"
