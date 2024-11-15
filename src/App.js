@@ -44,7 +44,11 @@ function App() {
         />
 
         <section ref={homeRef} id="home">
-          <Home />
+          <Home  onLinkClick={scrollToSection}
+          refs={{
+            about: aboutRef,
+            contact: contactRef,
+          }} />
         </section>
         <section ref={aboutRef} id="about">
           <About />

@@ -1,6 +1,9 @@
 import React from "react";
 
-const Home = () => {
+const Home = ({ onLinkClick, refs }) => {
+  const handleNavbarLinkClick = (scrollToSection) => {
+    onLinkClick(scrollToSection);
+  };
   return (
     <>
       <div className="2xl:h-[700px] 2xl:flex lg:pt-[100px] pt-[150px] items-center z-10 relative">
@@ -34,13 +37,21 @@ const Home = () => {
                   <a
                     href="#contact"
                     className="px-6 py-2 sm:px-8 sm:py-3 font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-500 transition duration-200 sm:mr-4 mb-2 sm:mb-0"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavbarLinkClick(refs.contact);
+                    }}
                   >
                     Contact Me
                   </a>
 
                   <a
-                    href="#learn-more"
+                    href="#about"
                     className="px-6 py-2 sm:px-8 sm:py-3 font-semibold text-white bg-black bg-opacity-60 rounded-full hover:bg-opacity-50 transition duration-200"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavbarLinkClick(refs.about);
+                    }}
                   >
                     Learn More
                   </a>
