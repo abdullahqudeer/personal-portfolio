@@ -14,6 +14,12 @@ const Navbar = ({ onLinkClick, refs }) => {
     setIsNavbarToggleOn(false);
     onLinkClick(scrollToSection);
   };
+  const handleDownloadCVClick = () => {
+    setIsNavbarToggleOn(false);
+    const downloadLink =
+      "https://drive.google.com/uc?export=download&id=15ZBvLROJCR3hbGviJRc6sNHrYr0q_is5";
+    window.location.href = downloadLink;
+  };
   const handleScroll = useCallback(() => {
     setIsSticky(window.scrollY > 50);
   }, []);
@@ -129,6 +135,18 @@ const Navbar = ({ onLinkClick, refs }) => {
                         Contact
                       </a>
                     </li>
+                    <li className="relative group sm:hidden">
+                      <a
+                        href="#download-cv"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleDownloadCVClick();
+                        }}
+                        className="menu-scroll lg:px-0 lg:py-6 lg:inline-flex lg:mr-0 text-custom-color text-base leading-6 py-2 flex mx-8 group-hover:text-[rgb(74,108,247)]"
+                      >
+                        Download CV
+                      </a>
+                    </li>
                   </ul>
                 </nav>
               </div>
@@ -136,6 +154,10 @@ const Navbar = ({ onLinkClick, refs }) => {
                 <a
                   href="#download-cv"
                   className="pl-9 pr-9 md:pl-9 md:pr-9 lg:pl-8 lg:pr-8 ease-in-out duration-300 text-white font-bold text-base leading-6 pt-3 pb-3 rounded-full bg-blue-600"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleDownloadCVClick();
+                  }}
                 >
                   Download CV
                 </a>

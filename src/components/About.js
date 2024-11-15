@@ -11,7 +11,7 @@ const About = () => {
   return (
     <>
       <div className="relative pt-145 pb-120 z-10">
-        <div className="w-ful mx-auto px-4 max-w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
+        <div className="w-ful mx-auto px-8 sm:px-4 max-w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px]">
           <div className="flex flex-wrap -mx-4">
             <span className="text-[1.25rem] leading-[1.75rem] text-[rgb(74,108,247)] font-semibold mb-3">
               ABOUT ME
@@ -92,7 +92,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="absolute right-0 top-1/2">
+        <div className="absolute right-0 top-1/2 hidden sm:block">
           <svg
             width="60"
             height="120"

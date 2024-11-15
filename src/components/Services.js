@@ -35,7 +35,7 @@ const Services = () => {
     <>
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:max-w-[1320px] 2xl:max-w-[1320px]">
         <div className="pt-[120px] pb-[90px] border-t border-[#e9ecf8]">
-          <div className="flex flex-wrap -mx-4">
+          <div className="flex flex-wrap -mx-4 items-stretch gap-4">
             <div className="px-4 w-full">
               <div className="text-center max-w-[600px] mb-[70px] mx-auto">
                 <span className="text-[rgba(74,108,247,1)] font-semibold text-[1.125rem] leading-[1.75rem] block mb-2">

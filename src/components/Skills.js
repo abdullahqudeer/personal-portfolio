@@ -75,8 +75,8 @@ const Skills = () => {
   return (
     <>
       <div className="pb-[250px] pt-[5rem] bg-[rgb(9,4,52)]">
-        <div className="container max-w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] mx-auto px-4">
-          <div className="flex flex-wrap -mx-[16px]">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 w-full  xl:max-w-[1280px]">
+          <div className="flex flex-wrap -mx-4">
             <div className="w-full px-4">
               <div className="text-center max-w-[570px] mb-12 mx-auto">
                 <h2 className="text-2xl text-white font-bold mb-4 md:text-4xl">
@@ -89,28 +89,32 @@ const Skills = () => {
               </div>
             </div>
             <div className="w-full px-4">
-              <div className="flex flex-wrap justify-center gap-4 p-8 z-10">
+              <div className="flex flex-wrap justify-center -mx-4 items-stretch">
                 {skills.map((skill, index) => (
                   <div
+                    className="p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
                     key={index}
-                    className="group relative w-72 h-72 bg-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl p-6 flex flex-col justify-center items-center"
                   >
                     <div
-                      className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-300 h-full w-full bg-cover bg-center"
-                      style={{
-                        backgroundImage:
-                          "url(images/white-cloud.png)",
-                      }}
-                    ></div>
-                    <div className="z-10 flex flex-col items-center justify-center">
-                      <img
-                        src={skill.icon}
-                        alt={skill.name}
-                        className="h-[8rem] mb-4 transition-transform duration-300 group-hover:scale-110"
-                      ></img>
-                      <h2 className="text-2xl font-bold text-center">
-                        {skill.name}
-                      </h2>
+                      key={index}
+                      className="group relative h-full bg-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl p-6 justify-center items-center"
+                    >
+                      <div
+                        className="absolute inset-0 opacity-0 group-hover:opacity-40 transition-opacity duration-300 h-full w-full bg-cover bg-center"
+                        style={{
+                          backgroundImage: "url(images/white-cloud.png)",
+                        }}
+                      ></div>
+                      <div className="z-10 flex flex-col items-center justify-center">
+                        <img
+                          src={skill.icon}
+                          alt={skill.name}
+                          className="h-[8rem] mb-4 transition-transform duration-300 group-hover:scale-110"
+                        ></img>
+                        <h2 className="text-2xl font-bold text-center">
+                          {skill.name}
+                        </h2>
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -119,31 +123,6 @@ const Skills = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="flex flex-wrap justify-center gap-8 p-8 bg-[rgb(9,14,52)]">
-        {skills.map((skill, index) => (
-          <div
-            key={index}
-            className="group w-50 h-50 bg-white rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl p-6 flex flex-col justify-center items-center"
-          >
-
-            <img
-              src={skill.icon}
-              alt={skill.name}
-              className="w-16 h-16 mb-4 transition-transform duration-300 group-hover:scale-110"
-            />
-
-
-            <h2 className="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 mb-2">
-              {skill.name}
-            </h2>
-
-            <p className="text-gray-600 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              {skill.description}
-            </p>
-          </div>
-        ))}
-      </div> */}
     </>
   );
 };

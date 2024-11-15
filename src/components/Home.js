@@ -33,7 +33,7 @@ const Home = () => {
                 <div className="mb-4 flex flex-col sm:flex-row sm:items-center">
                   <a
                     href="#contact"
-                    className="px-6 py-2 sm:px-8 sm:py-3 font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-500 transition duration-200 mr-4 mb-2 sm:mb-0"
+                    className="px-6 py-2 sm:px-8 sm:py-3 font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-500 transition duration-200 sm:mr-4 mb-2 sm:mb-0"
                   >
                     Contact Me
                   </a>
@@ -75,7 +75,7 @@ const Home = () => {
           </div>
         </div>
         <div>
-          <span className="absolute top-[8rem] left-[0]">
+          <span className="absolute top-[8rem] left-[0] hidden sm:block">
             <svg
               width="48"
               height="95"
@@ -106,7 +106,7 @@ const Home = () => {
             </svg>
           </span>
 
-          <span className="absolute right-0 bottom-0">
+          <span className="absolute right-0 bottom-0 hidden sm:block">
             <svg
               width="491"
               height="490"
