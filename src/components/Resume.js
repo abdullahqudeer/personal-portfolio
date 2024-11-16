@@ -142,10 +142,10 @@ const Resume = () => {
                       Bachelor Degree
                     </h3>
                     <p className="mb-3 leading-6 text-base font-semibold text-[rgb(149,156,177)]">
-                      NETSOL | Lahore Pakistan
+                      The Islamia University of Bahawalpur: IUB
                     </p>
                     <span className="text-white font-semibold text-xs leading-4 pt-2.5 pb-2.5 pl-4 pr-4 bg-[rgb(74,108,247)] rounded-full flex justify-center items-center inline-flex mb-5">
-                      2014 - 2018
+                      2009 - 2013
                     </span>
                     <p className="text-base leading-6 font-medium text-[rgb(149,156,177)]">
                       I earned my Bachelor's degree in Computer Science (BS-CS)
